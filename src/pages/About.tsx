@@ -1,9 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Brain, Users, Target, Award, Globe, Layers, UserPlus } from "lucide-react";  // Importing UserPlus icon
+import { Brain, Users, Target, Award, Globe, Layers, UserPlus } from "lucide-react";
 
 export function About() {
   return (
     <div className="container mx-auto py-24">
+      {/* Introduction Section */}
       <div className="max-w-3xl mx-auto text-center mb-16">
         <p className="text-lg text-muted-foreground">
           <br />
@@ -15,6 +16,7 @@ export function About() {
         </p>
       </div>
 
+      {/* Mission and Vision Section */}
       <div className="grid md:grid-cols-2 gap-8 mb-16">
         <Card>
           <CardContent className="pt-6">
@@ -47,6 +49,7 @@ export function About() {
         </Card>
       </div>
 
+      {/* Values Section */}
       <div className="max-w-3xl mx-auto">
         <h2 className="text-3xl font-bold text-center mb-8">Our Values</h2>
         <div className="space-y-6">
@@ -96,6 +99,7 @@ export function About() {
         </div>
       </div>
 
+      {/* Join Us Section */}
       <div className="max-w-3xl mx-auto mt-16 text-center">
         <h2 className="text-2xl font-semibold text-muted-foreground mb-4 flex items-center justify-center gap-2">
           <UserPlus className="h-6 w-6 text-primary" /> Join Us on Our Journey
@@ -106,6 +110,7 @@ export function About() {
           innovative solutions that empower the world.
         </p>
       </div>
-    </div>
+      </div>
+
   );
 }

@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -10,11 +10,11 @@
     --card-foreground: 0 0% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --primary: 330 100% 65%;    /* #FF4D9E */
+    --primary: 330 100% 65%;   /* #FF4D9E */
     --primary-foreground: 0 0% 98%;
-    --secondary: 276 71% 59%;   /* #A349E5 */
+    --secondary: 276 71% 59%;  /* #A349E5 */
     --secondary-foreground: 0 0% 98%;
-    --accent: 204 100% 70%;     /* #64D7FF */
+    --accent: 204 100% 70%;    /* #64D7FF */
     --accent-foreground: 204 90% 30%;
     --muted: 276 30% 95%;
     --muted-foreground: 276 5% 45%;
@@ -25,7 +25,7 @@
     --ring: 330 100% 65%;
     --radius: 0.75rem;
   }
- 
+
   .dark {
     --background: 224 71% 4%;
     --foreground: 0 0% 98%;
@@ -33,11 +33,11 @@
     --card-foreground: 0 0% 98%;
     --popover: 224 71% 4%;
     --popover-foreground: 0 0% 98%;
-    --primary: 330 100% 65%;    /* #FF4D9E */
+    --primary: 330 100% 65%;
     --primary-foreground: 0 0% 98%;
-    --secondary: 276 71% 59%;   /* #A349E5 */
+    --secondary: 276 71% 59%;
     --secondary-foreground: 0 0% 98%;
-    --accent: 204 100% 70%;     /* #64D7FF */
+    --accent: 204 100% 70%;
     --accent-foreground: 204 90% 98%;
     --muted: 276 30% 15%;
     --muted-foreground: 276 5% 65%;
@@ -47,15 +47,86 @@
     --input: 276 30% 20%;
     --ring: 330 100% 65%;
   }
-}
- 
-@layer base {
+
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@layer utilities {
+  .animate-slow-spin {
+    animation: slow-spin 25s linear infinite;
+  }
+
+  .animate-reverse-slow-spin {
+    animation: slow-spin 30s linear infinite reverse;
+  }
+
+  .animate-float {
+    animation: float 8s ease-in-out infinite;
+  }
+
+  .animate-ping-slow {
+    animation: ping 3s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .animate-delay-2000 {
+    animation-delay: 2000ms;
+  }
+
+  .animate-delay-3000 {
+    animation-delay: 3000ms;
+  }
+
+  /* Added Missing Animations */
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes chart-bounce {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+
+  .animate-scroll {
+    animation: scroll 10s linear infinite;
+  }
+
+  .animate-chart-bounce {
+    animation: chart-bounce 2s ease-in-out infinite;
+  }
+}
+
+.scroller {
+  mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+}
+
+.inner-scroller {
+  width: fit-content;
+  will-change: transform;
+}
+
+.inner-scroller:hover {
+  animation-play-state: paused;
 }
 
 .Logo {
@@ -63,4 +134,3 @@
   width: 4rem;
   margin-left: 20%;
 }
-

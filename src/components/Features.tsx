@@ -1,11 +1,13 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Brain, Code, LineChart, Users, Zap, Shield } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { FoundingMembers } from "@/components/FoundingMembers";
 
 const features = [
   {
     name: "Advanced ML Models",
-    description: "State-of-the-art machine learning models trained on vast datasets for optimal performance.",
+    description:
+      "State-of-the-art machine learning models trained on vast datasets for optimal performance.",
     icon: Brain,
   },
   {
@@ -50,20 +52,23 @@ export function Features() {
             Our comprehensive suite of AI tools and services helps businesses transform their operations and stay ahead of the competition.
           </p>
         </div>
+
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-none">
           <div className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-3">
             {features.map((feature) => (
-              <Card 
+              <Card
                 key={feature.name}
                 className="group relative overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <CardHeader>
                   <div className="relative inline-flex p-3 rounded-lg bg-gradient-to-r from-primary/10 to-secondary/10 transition-transform duration-300 group-hover:scale-110 group-hover:from-primary/20 group-hover:to-secondary/20">
-                    <feature.icon className={cn(
-                      "h-8 w-8 transition-colors duration-300",
-                      "text-primary group-hover:text-secondary"
-                    )} />
+                    <feature.icon
+                      className={cn(
+                        "h-8 w-8 transition-colors duration-300",
+                        "text-primary group-hover:text-secondary"
+                      )}
+                    />
                   </div>
                   <CardTitle className="mt-4 transition-colors duration-300 group-hover:text-primary">
                     {feature.name}
@@ -79,6 +84,9 @@ export function Features() {
           </div>
         </div>
       </div>
+      <br />
+      <br />
+      <FoundingMembers />
     </div>
   );
 }

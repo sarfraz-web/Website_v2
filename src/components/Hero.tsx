@@ -1,5 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Brain } from "lucide-react";
+import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export function Hero() {
   return (
@@ -26,31 +29,65 @@ export function Hero() {
                 </a>
               </div>
             </div>
-            <br /><br /><br />
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl ">
-              Unlock the Power of AI for Your Business
-            </h1>
+            <br />
+            <br />
+            <div className="flex flex-row">
+
+              <motion.div
+                // Animation properties for fade-in effect
+                initial={{ opacity: 0, scale: 1.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+                className="mr-60"
+              >
+                <h1
+                  className="text-4xl font-bold tracking-tight text-center sm:text-6xl whitespace-nowrap"
+                >
+                  Unlock The Power of AI For{" "}
+                  <br />
+                  <TypeAnimation
+                    sequence={[
+                      "BUSINESS", 
+                      1500,
+                      "DEVELOPERS",
+                      1000,
+                      "END-USER",
+                      1000,
+                      "EVERYONE",
+                      1500,
+                    ]}
+                    wrapper="span"
+                    speed={45}
+                    repeat={Infinity}
+                  />
+                </h1>
+              </motion.div>
+
+
+            </div>
             <br /><br />
             <p className="mt-6 text-lg leading-8 text-muted-foreground">
               Transform the way you work with cutting-edge AI solutions designed to streamline operations, enhance decision-making, and drive growth.
             </p>
-<br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <br /><br /><br /><br /><br /><br /><br /><br /><br />
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Button size="lg" className="gap-2 bg-primary hover:bg-primary/90">
                 <Brain className="h-5 w-5" />
                 Get Started
               </Button>
+              <Link to="/demo">
               <Button size="lg" variant="outline" className="border-secondary hover:bg-secondary/10">
                 Demo
-              </Button>
+            </Button>
+            </Link>
             </div>
           </div>
-          <div className="mt-16 flow-root sm:mt-24">
-            <div className="relative rounded-xl bg-gradient-to-r from-secondary/5 to-primary/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
+          <div className="mt-16 flex justify-center sm:mt-24">
+            <div className="relative max-w-[996px] max-h-[651px] rounded-xl bg-gradient-to-r from-secondary/5 to-primary/5 p-4 ring-1 ring-inset ring-gray-900/10">
               <img
-                src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2620&q=80"
+                src="public/products/chat.png"
                 alt="App screenshot"
-                className="rounded-md shadow-2xl ring-1 ring-gray-900/10"
+                className="rounded-md shadow-2xl ring-1 ring-gray-900/10 w-full h-full object-contain"
               />
             </div>
           </div>

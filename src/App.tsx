@@ -9,6 +9,9 @@ import { TermsOfService } from './pages/TermsOfService';
 import { PrivacyPolicy } from './pages/PrivacyPolicy';
 import { AnnouncementPage } from './pages/Announcement';
 import { JobPage } from './pages/Jobs';
+import { Login } from './pages/Login';
+import { GetStarted } from './pages/GetStarted';
+import { Demo } from './pages/LiveDemo';
 // import { TrustedBy } from './components/TrustedBy'; 
 
 
@@ -27,6 +30,9 @@ function App() {
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/announcement" element={<AnnouncementPage />} />
           <Route path="/jobs" element={<JobPage />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/get-started" element={<GetStarted />} />
+          <Route path="/demo" element={<Demo />} />
         </Routes>
       </main>
       <Footer />

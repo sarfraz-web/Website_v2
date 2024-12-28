@@ -22,8 +22,8 @@ const founders = [
     bio: "Ex-Engineering Director at OpenAI",
     links: {
       twitter: "https://twitter.com",
-      linkedin: "https://linkedin.com",
-      github: "https://github.com"
+      linkedin: "https://www.linkedin.com/in/mohammad-sarfraz-043118258",
+      github: "https://github.com/sarfraz-web"
     }
   },
   {
@@ -33,8 +33,8 @@ const founders = [
     bio: "B.tech in Computer Science & Engineering",
     links: {
       twitter: "https://twitter.com",
-      linkedin: "https://linkedin.com",
-      github: "https://github.com"
+      linkedin: "https://www.linkedin.com/in/aquib-jawed-1147ab164",
+      github: "https://github.com/anaquib1110"
     }
   },
   {
@@ -44,8 +44,8 @@ const founders = [
     bio: "B.tech in Computer Science & Engineering",
     links: {
       twitter: "https://twitter.com",
-      linkedin: "https://linkedin.com",
-      github: "https://github.com"
+      linkedin: "https://www.linkedin.com/in/gufran-ahmad-siddiqui-232756278",
+      github: "https://github.com/GufranSiddiqui0101"
     }
   }
 ];

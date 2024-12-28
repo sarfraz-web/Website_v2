@@ -14,7 +14,7 @@ export function Navbar() {
       <nav className="container flex h-16 items-center">
         <div className="flex flex-1 items-center gap-6">
           <a href="/" className="flex items-center gap-2 font-semibold">
-            <img src="./public/icons/logo.png" alt="Logo" className="Logo" />
+            <img src="/icons/logo.png" alt="Logo" className="Logo" />
           </a>
           <div className="hidden md:block">
             <NavigationMenuDemo />

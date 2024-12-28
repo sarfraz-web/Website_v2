@@ -85,7 +85,7 @@ export function Hero() {
           <div className="mt-16 flex justify-center sm:mt-24">
             <div className="relative max-w-[996px] max-h-[651px] rounded-xl bg-gradient-to-r from-secondary/5 to-primary/5 p-4 ring-1 ring-inset ring-gray-900/10">
               <img
-                src="/public/products/chat.png"
+                src="/products/chat.png"
                 alt="App screenshot"
                 className="rounded-md shadow-2xl ring-1 ring-gray-900/10 w-full h-full object-contain"
               />
